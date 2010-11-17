@@ -1,4 +1,4 @@
-$('#control').fadeIn("slow");	// JavaScript is loaded and app is ready.
+$('#control').fadeIn(1500);	// JavaScript is loaded and app is ready.
 
 document.createElement('header');
 document.createElement('footer');
@@ -52,8 +52,11 @@ function Timer() {
         return (Time < 10) ? "0" + Time : +Time;
     }
 }
+
 var timer = new Array();
+
 var timerNum = 1;
+
 setInterval(updateTimers, 1000);
 
 function updateTimers() {
@@ -61,6 +64,8 @@ function updateTimers() {
         timer[x].update(x);
     }
 }
+
+// Add a timer
 $('a#new').live('click', function () {
     timepiecename = prompt("Enter the name of the time piece", "Time Piece " + timerNum);
     if (timepiecename != null) {
@@ -69,6 +74,8 @@ $('a#new').live('click', function () {
         timerNum += 1;
     }
 });
+
+// Global timer reset
 $('#reset-all').live('click', function () {
     for (x = 1; x <= timerNum; x++) {
         timer[x] = new Timer();
@@ -77,6 +84,8 @@ $('#reset-all').live('click', function () {
         $("#s" + x + " #control").addClass("restart");
     }
 });
+
+// Start timer
 $('.start').live('click', function () {
     $(this).text('Pause');
     $(this).removeClass("start");
@@ -85,6 +94,8 @@ $('.start').live('click', function () {
     var num = theParent.substr(1);
     timer[num].start(0, 0, 0);
 });
+
+// Pause timer
 $('.pause').live('click', function () {
     $(this).text('Start');
     $(this).removeClass("pause");
@@ -93,6 +104,8 @@ $('.pause').live('click', function () {
     var num = theParent.substr(1);
     timer[num].stop();
 });
+
+// Restart timer
 $('.restart').live('click', function () {
     $(this).text('Pause');
     $(this).removeClass("restart");
@@ -101,6 +114,8 @@ $('.restart').live('click', function () {
     var num = theParent.substr(1);
     timer[num].restart();
 });
+
+// Rest timer
 $('.reset').live('click', function () {
     var theParent = $(this).closest('section').attr('id');
     var num = theParent.substr(1);
@@ -109,12 +124,16 @@ $('.reset').live('click', function () {
     $('#s' + num + ' #control').removeClass();
     $('#s' + num + ' #control').addClass('start');
 });
+
+// Delete timer
 $('.delete').live('click', function () {
     var theParent = $(this).closest('section').attr('id');
     var num = theParent.substr(1);
     timer[num].stop();
     $('#' + theParent).remove();
 });
+
+// Change title promt when title is clicked
 $('#timepiecetitle').live('click', function () {
     var theParent = $(this).closest('section').attr('id');
     var num = theParent.substr(1);
