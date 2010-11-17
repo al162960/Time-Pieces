@@ -1,4 +1,4 @@
-$('#control').fadeIn("slow");
+$('#control').fadeIn("slow");	// JavaScript is loaded and app is ready.
 
 document.createElement('header');
 document.createElement('footer');

@@ -1,7 +1,8 @@
 /*
 Name: Time Pieces
-Date: Aug 8, 2010
+Date: Nov 17, 2010
 Description: Time tracking application.
+Version: 0.2
 Author: Mateusz Wijas
 Author URI: http://www.mateuszwijas.com
 
@@ -26,15 +27,15 @@ a { color: #999; font-size: 14px; text-decoration: none; }
 /*** Header ***/
 header { margin: 0 0 20px 0; }
 header h1 { color: #333; font-size: 56px; margin: 0; padding: 0; text-shadow: 0px 4px 10px #ccc; }
-header p { color: #999; font-family: "Palatino", serif; font-size: 16px; font-style: italic; line-height: 1.25; margin: 0 0 0 5px; }
+header p { color: #999; font-family: "Palatino", serif; font-size: 16px; font-style: italic; line-height: 1.25; margin: 0 0 20px 5px; }
 header p a { color: #222; font-size: 16px; font-weight: bold; }
 header p a:hover { color: #f33; }
 
-#control { display: none; }
+header #control { display: none; }
 
 /*** section ***/
 section { background-color: #222; border: 1px solid #222; margin: 0 0 40px 0; overflow: auto; position: relative; -moz-box-shadow: 0px 4px 10px #666; -webkit-box-shadow: 0px 4px 10px #666; }
-section h2 { color: #f1f1f1; font-weight: normal; margin: 0; padding: 10px; }
+section h2 { color: #f1f1f1; cursor: pointer; font-weight: normal; margin: 0; padding: 10px; }
 
 section a { color: #f1f1f1; margin: 0; padding: 10px; }
 section a:hover { color: #f33; }
