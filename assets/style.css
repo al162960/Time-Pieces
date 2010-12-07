@@ -6,7 +6,8 @@ Version: 0.2
 Author: Mateusz Wijas
 Author URI: http://www.mateuszwijas.com
 
-Notes/Ideas:
+Notes/Fixes:
+	.issue with changing name of time piece, default value isn't correct
 	.merge to do list with time tracking
 	.users can add a client/list
 		.each list can add new items
